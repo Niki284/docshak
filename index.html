@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
+  
+</head>
+<body>
+
+   
+          <nav class="sticky-nav">
+  <div class="nav-container">
+    <div class="logo">
+      <a href="/">
+        <img src="/img/logo.png" alt="Logo">
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="#welcome-block">Info</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+        
+
+  <main>
+      <div class="cursor"></div>
+
+        <section class="welcom">
+      
+  <div id="welcome-block">
+    <h2 class="info__title">Welkom!</h2>
+    <p>Dit is de start van je documentatie.
+
+    We ontwikkelen een ‘tikkende tijbom’ in de vorm van een kubus, waarbij spelers binnen een bepaalde tijd een reeks puzzels moeten oplossen om de "bom" te ontmantelen. De kubus bevat vier zijden met verschillende puzzels en een timer aan de bovenzijde die aftelt vanaf vijf minuten. Voor elke opgeloste puzzel wordt er extra tijd toegevoegd. Bij een mislukte poging wordt er tijd afgetrokken. 
+    </p>
+
+    <h2 class="info__title">Puzzels</h2>
+    <ul class="info cards">
+        <li>Geheime boodschap: De speler krijgt een tekst waarin een verborgen code zit met de woorden: links,  rechts, boven, onder. Deze moet worden ingevoerd via een afstandsbediening De speler krijgt een kleurenvolgorde a.d.h.v. ledjes en een RFID-tag voor de volgende puzzel. </li>
+        <li>Kabels doorsnijden: Met behulp van de eerder verkregen kleurenvolgorde moeten de juiste kabels worden “doorgeknipt”. Dit gebeurt met drie arcadeknoppen om omhoog en omlaag te bewegen om de kabel te selecteren en te knippen. Bij succes opent een compartiment met een sleutel. </li>
+        <li>Kluis met vibraties: De speler moet de vibraties van de kluis analyseren om de juiste code in te voeren via een potentiometer of draaiknop. Bij correcte invoer ontvangt de speler een sleutel of RFID-tag.</li>
+        <li>Ontmanteling: De twee verkregen voorwerpen (sleutels/RFID-tags) worden gebruikt om de bom uit te schakelen en het spel te voltooien. </li>
+    </ul>
+  </div>
+
+    </section>
+
+     <section class="cards">
+      
+<h2 class="cards__title"> <svg class="cards__title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#4a90e2" aria-hidden="true" focusable="false">
+    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+  </svg>
+  Personen</h2>
+<div class="cards__persoon">
+  <div class="card">
+    <img src="img/https___static.jpg" alt="Naam persoon">
+    <h3>Naam</h3>
+    <p><strong>Rol:</strong> Ontwikkelaar</p>
+    <p>“Werkte aan de elektronische puzzels.”</p>
+  </div>
+  <div class="card">
+    <img src="img/vandam.jpg" alt="Naam persoon">
+    <h3>Naam 2</h3>
+    <p><strong>Rol:</strong> Designer</p>
+    <p>“Verantwoordelijk voor het ontwerp van de behuizing.”</p>
+  </div>
+  <div class="card">
+    <img src="img/Steven.jpg" alt="Naam persoon">
+    <h3>Naam 3</h3>
+    <p><strong>Rol:</strong> Documentatie</p>
+    <p>“Schreef deze pagina en testte de puzzels.”</p>
+  </div>
+</div>
+
+    </section>
+
+    <section class="bottom">
+      
+  <section class="feedback">
+    <div class="feedback__content">
+      <div class="feedback__text">
+        <h3 id="contact">Bedankt voor je bezoek!</h3>
+        <p>Heb je ons project getest of bekeken? We horen graag je mening.</p>
+        <a href="https://jouw-formulier-link" class="btn-feedback" target="_blank">Geef feedback</a>
+      </div>
+      <div class="feedback__qr">
+        <img src="img/logo.png" alt="Scan om te beoordelen">
+        <p class="qr-caption">Scan de QR-code om te beoordelen</p>
+      </div>
+    </div>
+  </section>
+
+    </section>
+    
+  </main>
+
+  <footer>
+    <p>&copy; 2025</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
+  <script type="module" src="js/main.js"></script> <!-- Je eigen script -->
+   
+  
+</body>
+</html>

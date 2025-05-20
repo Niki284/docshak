@@ -1,0 +1,343 @@
+.cursor {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 0 ;
+    left: 0 ;
+    border: 3px solid red;
+    opacity: .5;
+    border-radius: 50%;
+    pointer-events: none;
+    background-color: lightcoral;
+    mix-blend-mode: difference;
+    z-index: 1;
+    transition: transform 0.3s ease;
+  }
+ 
+  
+.hero-header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.header-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Sticky Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+
+#welcome-block {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-left: 6px solid #4a90e2;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 850px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  color: #2c3e50;
+}
+
+#welcome-block h2 {
+  font-size: 2rem;
+  color: #4a90e2;
+  margin-top: 2rem;
+  position: relative;
+  padding-left: 1.8rem;
+}
+
+#welcome-block h2::before {
+  content: "📌";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#welcome-block p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-top: 1rem;
+  background: #f0f4f8;
+  padding: 1rem;
+  border-left: 4px solid #4a90e2;
+  border-radius: 4px;
+}
+
+#welcome-block ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1.5rem;
+}
+
+#welcome-block li {
+  background-color: #f9f9f9;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  border-left: 6px solid #4a90e2;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+#welcome-block li:hover {
+  background-color: #eef6ff;
+}
+
+#welcome-block li::before {
+  content: "🧩";
+  position: absolute;
+  left: -2.2rem;
+  top: 1.1rem;
+  font-size: 1.2rem;
+}
+
+.cards {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+.cards__title {
+  display: inline-flex;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 3px solid #4a90e2;
+  padding-bottom: 0.25rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.cards__title-icon {
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+  /* kleur staat al in fill attribuut, maar kan ook hier met CSS: */
+  /* fill: #4a90e2; */
+}
+
+.cards__title:hover {
+  color: #4a90e2;
+  cursor: default;
+}
+
+
+.cards__persoon {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.cards__persoon .card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  max-width: 200px;
+  flex: 1 1 200px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Verspringing */
+.cards__persoon .card:nth-of-type(1) {
+  transform: translate(0px, 0px);
+}
+.cards__persoon .card:nth-of-type(2) {
+  transform: translate(0px, 50px) !important;
+}
+.cards__persoon .card:nth-of-type(3) {
+  transform: translate(0px, 100px) !important;
+}
+
+
+/* Hover effect */
+.cards__persoon .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsiveness: reset verticaal verschuiven op small screens */
+@media (max-width: 900px) {
+  .cards__persoon .card:nth-of-type(1),
+  .cards__persoon .card:nth-of-type(2),
+  .cards__persoon .card:nth-of-type(3) {
+    transform: translate(0px, 0px);
+  }
+}
+
+.cards__persoon .card img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #4a90e2;
+}
+
+.cards__persoon .card h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #2c3e50;
+}
+
+.cards__persoon .card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0.3rem 0;
+}
+
+
+
+.bottom {
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+.feedback {
+  background-color: #f9f9f9;
+  padding: 3rem 2rem;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.feedback__content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.feedback__text {
+  flex: 1 1 300px;
+  text-align: left;
+}
+
+.feedback__text h3 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.feedback__text p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.btn-feedback {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #4a90e2;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-feedback:hover {
+  background-color: #357abd;
+}
+
+.feedback__qr {
+  flex: 1 1 150px;
+  text-align: center;
+}
+
+.feedback__qr img {
+  max-width: 150px;
+  border: 2px solid #4a90e2;
+  border-radius: 8px;
+}
+
+.qr-caption {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+footer {
+  max-width: 80rem;
+  margin: 0 auto;
+}
